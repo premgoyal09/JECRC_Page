@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Slider</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    /* Paste your CSS here (shortened for brevity) */
+    body {
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .courses-section {
+      padding: 50px 80px;
+    }
+
+    .course-head {
+      text-align: center;
+    }
+
+    .course-carousel {
+      overflow: hidden;
+      width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .course-slide {
+      min-width: 1200px;
+      box-sizing: border-box;
+    }
+
+    .course-btns {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .course-btns button {
+      padding: 10px 14px;
+      border-radius: 50%;
+      background-color: #E0141B;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .course-btns i {
+      font-size: 20px;
+    }
+
+
+    .courses-section {
+      padding: 50px 80px;
+    }
+
+    .course-head {
+      text-align: center;
+    }
+
+    .courses-section h1 {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .courses-section h2 {
+      font-size: 20px;
+      color: #555;
+      font-weight: 550;
+    }
+
+    .label {
+      padding: 2px 0px;
+      border-radius: 4px;
+      font-size: 20px;
+    }
+
+    .course-columns {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      min-width: 1150px;
+      max-width: 1000px;
+      /* margin: auto; */
+      margin-left: 100px;
+      margin-top: 30px;
+      padding: 30px;
+      /* border: 3px solid  #000; */
+      z-index: 10;
+    }
+
+    .course-column {
+      background: white;
+      border-radius: 12px;
+      flex: 1;
+      min-width: 300px;
+      max-width: 350px;
+    }
+
+    .course-column img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .course-img-circle {
+      padding: 20px;
+      margin: 20px 0px;
+      background-color: #ffffff;
+      display: inline;
+      border-radius: 50%;
+      /* border: 2px solid #7e7777; */
+      box-shadow: 0px 0px 5px -1px #7e7777;
+    }
+
+    .course-column h3 {
+      margin-top: 10px;
+      font-size: 27px;
+      color: rgb(13, 13, 13);
+      font-weight: 700;
+      font-family: "Red Hat Display", sans-serif;
+
+    }
+
+    .course-column ul {
+      text-align: left;
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .course-column ul li {
+      font-family: "Red Hat Display", sans-serif;
+      margin-bottom: 8px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+
+    .course-btns {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .course-btns button {
+      padding: 10px 14px;
+      border-radius: 50%;
+      background-color: #E0141B;
+      border: none;
+      color: #fff;
+    }
+
+    .course-btns i {
+
+      font-size: 20px;
+    }
+
+
+    .course-column-two {
+      display: flex;
+      justify-content: center;
+      /* align-items: center; */
+      gap: 40px;
+    }
+
+    .course-column-scd-row {
+      display: flex;
+      justify-content: space-around;
+      /* align-items: center; */
+      gap: 40px;
+      margin: 20px 120px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 24px;
+    }
+
+    .card img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 16px;
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 16px;
+      color: #333;
+    }
+
+    .card ul {
+      padding-left: 18px;
+    }
+
+    .card ul li {
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+
+    .course-carousel {
+      display: flex;
+      overflow: hidden;
+      width: 1200px;
+    }
+
+    .course-two {
+      transform: translateX(60%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="courses-section">
+    <div class="course-head">
+      <h1>Courses Offered</h1>
+      <h2>Under Graduate <span class="label">(UG)</span></h2>
+    </div>
+    <div class="course-carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="course-slide">
+          <!-- Paste first course set (e.g., Engineering, Science, Business) -->
+          <h3>Slide 1</h3>
+          <div class="course-columns">
+            <!-- Engineering & Technology -->
+            <div class="course-column">
+              <div class="course-img-circle">
+                <img src="https://cdn.npfs.co/uploads/template/198/2970/publish/images/icon1.svg?1747223717"
+                  alt="Engineering Icon" />
+              </div>
+              <h3>Engineering & Technology</h3>
+              <ul>
+                <li>B.Tech. Civil Engineering with L&T EduTech</li>
+                <li>B.Tech. Electronics and Communication Engineering (ECE) (L&T EduTech)</li>
+                <li>B.Tech. Mechanical Engineering with L&T EduTech</li>
+                <li>B.Tech. Computer Science and Engineering</li>
+                <li>B.Tech. (CSE) Artificial Intelligence and Data Science</li>
+                <li>B.Tech. (CSE) Generative AI with L&T EduTech</li>
+                <li>B.Tech. (CSE) Software Product Engineering with Kalvium</li>
+                <li>B.Tech. (CSE) Artificial Intelligence and Machine Learning with Xebia</li>
+                <li>B.Tech. (CSE) Full Stack Web Design and Development with Xebia</li>
+                <li>B.Tech. (CSE) Artificial Intelligence and Machine Learning with Samatrix.io</li>
+                <li>B.Tech. (CSE) Data Science and Data Analytics with Samatrix.io</li>
+                <li>B.Tech. (CSE) Cyber Security with EC-Council, USA</li>
+                <li>B.Tech. Computer Science and Business Systems(CSBS) with TCS</li>
+                <li>B.Tech. (CSE) Artificial Intelligence and Machine Learning with IBM</li>
+                <li>B.Tech. (CSE) Cloud Computing with Microsoft</li>
+                <li>B.Tech. (CSE) Blockchain (upGrad Campus)</li>
+              </ul>
+            </div>
+            <!-- School of Sciences -->
+            <div class="course-column">
+              <div class="course-img-circle">
+                <img src="https://cdn.npfs.co/uploads/template/198/2970/publish/images/icon4.svg?1747223717"
+                  alt="Science Icon" />
+              </div>
+              <h3>School of Sciences</h3>
+              <ul>
+                <li>B.Sc. (Hons.) Biotechnology 4 Year</li>
+                <li>B.Sc. (Hons.) Microbiology 4 Year</li>
+                <li>B.Sc. (Hons.) Forensic Science 4 Year</li>
+              </ul>
+            </div>
+            <!-- Jaipur School of Business -->
+            <div class="course-column">
+              <div class="course-img-circle">
+                <img src="https://cdn.npfs.co/uploads/template/198/2970/publish/images/icon2.svg?1747223717"
+                  alt="Business Icon" />
+              </div>
+              <h3>Jaipur School of Business</h3>
+              <ul>
+                <li>Bachelor of Business Administration (BBA)</li>
+                <li>BBA (FinTech) with Zell Education and Deloitte</li>
+                <li>BBA (International Accreditation-Multiple Specializations) with ISDC</li>
+                <li>BBA Global Business with ISDC</li>
+                <li>BBA New Age Sales and Marketing with CollegeDekho</li>
+                <li>BBA (Various Specializations) with CollegeDekho</li>
+                <li>BBA Banking Financial Service and Insurance</li>
+                <li>BBA Data Analytics and Data Visualization with Samatrix.io</li>
+                <li>Bachelor of Commerce (B.Com.)</li>
+                <li>B.Com. (International Accreditation-Multiple Specializations) with ISDC</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="course-slide">
+          <!-- Paste second course set (e.g., BCA, Design, Law, Mass Comm) -->
+          <h3>Slide 2</h3>
+          <div class="course-two">
+            <div class="course-column-two">
+              <div class="card">
+                <img src="https://cdn.npfs.co/uploads/template/198/2970/publish/images/icon9.svg?1747223717"
+                  alt="Computer Applications">
+                <h2>Computer Applications</h2>
+                <ul>
+                  <li>Bachelor of Computer Applications</li>
+                  <li>BCA Health Informatics</li>
+                  <li>BCA Artificial Intelligence and Data Science</li>
+                  <li>BCA MERN Full Stack with CollegeDekho</li>
+                  <li>BCA Data Science and Data Analytics with Samatrix.io</li>
+                  <li>BCA Cyber Security with EC-Council, USA</li>
+                  <li>BCA AI and Machine Learning with IBM</li>
+                  <li>BCA Cloud Computing and Full Stack Development with IBM</li>
+                  <li>BCA Full Stack Web Design and Development with Xebia</li>
+                  <li>BCA Cloud Computing with Microsoft</li>
+                  <li>BCA Cloud Computing (An AWS Verified Program)</li>
+                  <li>BCA Blockchain (upGrad Campus)</li>
+                  <li>BCA (Various Specializations) with CollegeDekho</li>
+                </ul>
+              </div>
+
+              <div class="card">
+                <img src="https://cdn.npfs.co/uploads/template/198/2970/publish/images/icon7.svg?1747223717"
+                  alt="Design">
+                <h2>Jaipur School of Design</h2>
+                <ul>
+                  <li>B. Des. Interior Design</li>
+                  <li>B. Des. Jewellery Design and Manufacturing</li>
+                  <li>B. Des. Fashion</li>
+                  <li>B. Des (Communication Design)-ISDC</li>
+                  <li>B. Des. (Game Art & Animation)-AID</li>
+                  <li>Bachelor of Visual Arts-Graphic Design</li>
+                  <li>Bachelor of Visual Arts-Painting</li>
+                </ul>
+              </div>
+            </div>
+            <div class="course-column-scd-row">
+              <div class="card">
+                <img src="https://cdn.npfs.co/uploads/template/198/2970/publish/images/icon11.svg?1747223717" alt="Law">
+                <h2>Law</h2>
+                <ul>
+                  <li>B.A. LLB (Hons.)</li>
+                  <li>B.Sc. LLB (Hons.)</li>
+                  <li>BBA. LLB (Hons.)</li>
+                </ul>
+              </div>
+
+              <div class="card">
+                <img src="https://cdn.npfs.co/uploads/template/198/2970/publish/images/icon8.svg?1747223717"
+                  alt="Mass Communication">
+                <h2>Jaipur School of Mass Communication</h2>
+                <ul>
+                  <li>B.A. Journalism Mass Communication</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="course-slide">
+          <!-- If repeated content or new block -->
+          <h3>Slide 3</h3>
+          <div class="course-two">
+            <div class="course-column-two">
+              <div class="card">
+                <img src="https://cdn.npfs.co/uploads/template/198/2970/publish/images/icon9.svg?1747223717"
+                  alt="Computer Applications">
+                <h2>Computer Applications</h2>
+                <ul>
+                  <li>Bachelor of Computer Applications</li>
+                  <li>BCA Health Informatics</li>
+                  <li>BCA Artificial Intelligence and Data Science</li>
+                  <li>BCA MERN Full Stack with CollegeDekho</li>
+                  <li>BCA Data Science and Data Analytics with Samatrix.io</li>
+                  <li>BCA Cyber Security with EC-Council, USA</li>
+                  <li>BCA AI and Machine Learning with IBM</li>
+                  <li>BCA Cloud Computing and Full Stack Development with IBM</li>
+                  <li>BCA Full Stack Web Design and Development with Xebia</li>
+                  <li>BCA Cloud Computing with Microsoft</li>
+                  <li>BCA Cloud Computing (An AWS Verified Program)</li>
+                  <li>BCA Blockchain (upGrad Campus)</li>
+                  <li>BCA (Various Specializations) with CollegeDekho</li>
+                </ul>
+              </div>
+
+              <div class="card">
+                <img src="https://cdn.npfs.co/uploads/template/198/2970/publish/images/icon7.svg?1747223717"
+                  alt="Design">
+                <h2>Jaipur School of Design</h2>
+                <ul>
+                  <li>B. Des. Interior Design</li>
+                  <li>B. Des. Jewellery Design and Manufacturing</li>
+                  <li>B. Des. Fashion</li>
+                  <li>B. Des (Communication Design)-ISDC</li>
+                  <li>B. Des. (Game Art & Animation)-AID</li>
+                  <li>Bachelor of Visual Arts-Graphic Design</li>
+                  <li>Bachelor of Visual Arts-Painting</li>
+                </ul>
+              </div>
+            </div>
+            <div class="course-column-scd-row">
+              <div class="card">
+                <img src="https://cdn.npfs.co/uploads/template/198/2970/publish/images/icon11.svg?1747223717" alt="Law">
+                <h2>Law</h2>
+                <ul>
+                  <li>B.A. LLB (Hons.)</li>
+                  <li>B.Sc. LLB (Hons.)</li>
+                  <li>BBA. LLB (Hons.)</li>
+                </ul>
+              </div>
+
+              <div class="card">
+                <img src="https://cdn.npfs.co/uploads/template/198/2970/publish/images/icon8.svg?1747223717"
+                  alt="Mass Communication">
+                <h2>Jaipur School of Mass Communication</h2>
+                <ul>
+                  <li>B.A. Journalism Mass Communication</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="course-btns">
+      <button onclick="Previous()"><i class="ri-arrow-left-line"></i></button>
+      <button onclick="Next()"><i class="ri-arrow-right-line"></i></button>
+    </div>
+  </section>
+
+  <script>
+    let currentSlide = 0;
+    const totalSlides = document.querySelectorAll('.course-slide').length;
+    const track = document.getElementById('carouselTrack');
+
+    function updateSlide() {
+      const slideWidth = document.querySelector('.course-slide').offsetWidth;
+      track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    }
+
+    function Next() {
+      if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+        updateSlide();
+      }
+    }
+
+    function Previous() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateSlide();
+      }
+    }
+  </script>
+</body>
+
+</html>
